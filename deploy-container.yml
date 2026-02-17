@@ -1,6 +1,6 @@
 ---
 # Swiggy Project – Ansible Docker Deployment
-# Developed & Automated by: shashikant2025
+# Developed & Automated by: dhee31
 
 - name: Deploy latest Swiggy container from DockerHub
   hosts: dev
@@ -8,7 +8,7 @@
 
   vars:
     container_name: "swiggy_container"
-    image_name: "shashi/swiggy:latest"
+    image_name: "dhee31/swiggy:latest"
     container_port: "8084"     # Host Port
     request_port: "8080"       # Container Port (Tomcat default)
 
@@ -46,5 +46,4 @@
         restart_policy: always
         ports:
           - "{{ container_port }}:{{ request_port }}"
-
 
